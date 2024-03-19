@@ -210,7 +210,7 @@ module Tourmaline
       end
     end
 
-    def reply_parameters_for(message : Message)
+    def reply_parameters_for(message : Tourmaline::InaccessibleMessage | Tourmaline::Message)
       ReplyParameters.new(message_id: message.message_id, chat_id: message.chat.id)
     end
   end
