@@ -152,7 +152,7 @@ module Tourmaline
         actions << UpdateAction::VideoNote if message.video_note
         actions << UpdateAction::Invoice if message.invoice
         actions << UpdateAction::SuccessfulPayment if message.successful_payment
-        actions << UpdateAction::UserShared if message.user_shared
+        actions << UpdateAction::UserShared if message.users_shared
         actions << UpdateAction::ChatShared if message.chat_shared
         actions << UpdateAction::ConnectedWebsite if message.connected_website
         actions << UpdateAction::PassportData if message.passport_data
