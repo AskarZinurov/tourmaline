@@ -116,7 +116,7 @@ module Tourmaline
         actions << UpdateAction::Message
         actions << UpdateAction::ThreadMessage if message.message_thread_id
         actions << UpdateAction::ReplyMessage if message.reply_to_message
-        actions << UpdateAction::ForwardedMessage if message.forward_date
+        actions << UpdateAction::ForwardedMessage if message.forward_origin
 
         if chat = message.chat
           actions << UpdateAction::PinnedMessage if chat.pinned_message
