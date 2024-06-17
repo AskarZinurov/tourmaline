@@ -119,7 +119,7 @@ module Tourmaline
         actions << UpdateAction::ForwardedMessage if message.forward_origin
 
         if chat = message.chat
-          actions << UpdateAction::PinnedMessage if chat.pinned_message
+          actions << UpdateAction::PinnedMessage if message.pinned_message
         end
 
         actions << UpdateAction::ViaBot if message.via_bot
